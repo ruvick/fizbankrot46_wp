@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-	
+
   var inputmask_96e76a5f = {
     "mask": "+7(999)999-99-99"
   };
@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
     $('#order-modal').arcticmodal();
   });
 
-  $(".download-docs-link").click(function(e) {
+  $(".download-docs-link").click(function (e) {
     e.preventDefault();
     var formid = $(this).data('formid');
     var message = $(this).data('mailmsg');
@@ -23,12 +23,12 @@ jQuery(document).ready(function ($) {
     $('#docs-modal').arcticmodal();
   });
 
-  $('.modal-block__close').click(function() {
+  $('.modal-block__close').click(function () {
     $('.modal-block').hide();
   });
 
   $('.modal-block').hide();
-  setTimeout(function() {
+  setTimeout(function () {
     $('.modal-block').css('display', 'flex');
   }, 12000);
 
@@ -45,22 +45,25 @@ jQuery(document).ready(function ($) {
     } else {
       var jqXHR = jQuery.post(
         allAjax.ajaxurl, {
-          action: 'universal_send',
-          nonce: allAjax.nonce,
-          msg: message,
-          name: name,
-          mail: mail,
-          tel: phone
-        }
+        action: 'universal_send',
+        nonce: allAjax.nonce,
+        msg: message,
+        name: name,
+        mail: mail,
+        tel: phone
+      }
 
       );
 
-
-      jqXHR.done(function (responce) {
-        $(".docs-modal__wrapper").hide();
-        $(".docs-modal__success").css('display', 'flex');
-
+      jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
+        document.location.href = 'https://fizbankrot46.ru/stranicza-blagodarnosti';
       });
+
+      // jqXHR.done(function (responce) {
+      //   $(".docs-modal__wrapper").hide();
+      //   $(".docs-modal__success").css('display', 'flex');   
+
+      // });
 
       jqXHR.fail(function (responce) {
         jQuery('#messgeModal #lineIcon').html('');
@@ -71,7 +74,7 @@ jQuery(document).ready(function ($) {
   });
 
   //jQuery(document).snowfall({image :"https://fizbankrot46.ru/wp-content/themes/rasa/img/snow1.png", minSize: 10, maxSize:20});
-  
+
   jQuery(".uniSendBtn").click(function () {
     var formid = jQuery(this).data("formid");
     var message = jQuery(this).data("mailmsg");
@@ -83,22 +86,25 @@ jQuery(document).ready(function ($) {
     } else {
       var jqXHR = jQuery.post(
         allAjax.ajaxurl, {
-          action: 'universal_send',
-          nonce: allAjax.nonce,
-          msg: message,
-          name: name,
-          tel: phone
-        }
+        action: 'universal_send',
+        nonce: allAjax.nonce,
+        msg: message,
+        name: name,
+        tel: phone
+      }
 
       );
 
-
-      jqXHR.done(function (responce) {
-        $.arcticmodal('close');
-        jQuery('#messgeModal #lineMsg').html("Ваша заявка принята. Мы свяжемся с Вами в ближайшее время.");
-        jQuery('#messgeModal').arcticmodal();
-
+      jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
+        document.location.href = 'https://fizbankrot46.ru/stranicza-blagodarnosti';
       });
+
+      // jqXHR.done(function (responce) {
+      //   $.arcticmodal('close');
+      //   jQuery('#messgeModal #lineMsg').html("Ваша заявка принята. Мы свяжемся с Вами в ближайшее время.");
+      //   jQuery('#messgeModal').arcticmodal();
+
+      // });
 
       jqXHR.fail(function (responce) {
         jQuery('#messgeModal #lineIcon').html('');
@@ -108,26 +114,26 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $(".menu a").click(function() {
-    if($('.menu').hasClass("active")) {
+  $(".menu a").click(function () {
+    if ($('.menu').hasClass("active")) {
       $('.menu').slideUp();
       $('.menu').removeClass('active');
     }
-    if($('.hamburger').hasClass('active')) {
+    if ($('.hamburger').hasClass('active')) {
       $('.hamburger').removeClass('active');
     }
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top - 130;
     console.log(destination);
-    
+
     $("html, body").animate({
       scrollTop: destination
     }, 1000);
     return false;
   });
 
-  $('.hamburger').click(function() {
-    if($(this).hasClass('active')) {
+  $('.hamburger').click(function () {
+    if ($(this).hasClass('active')) {
       $(this).removeClass('active');
       $('.menu').removeClass('active');
       $('.menu').slideUp();
