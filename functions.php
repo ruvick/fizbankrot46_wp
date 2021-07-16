@@ -183,7 +183,7 @@ define('TELEGRAM_TOKEN', '938251436:AAEGSIJWTeSKkrGNDf1xt_C_Y8YhTUROkwU');
 define('TELEGRAM_CHATID', '86447923');
 function message_to_telegram($text)
 {
-	$arr_chat = array('86447923', '185681960', '381762556');
+	$arr_chat = array('86447923', '185681960', '381762556, 57815731'); 
 	if($arr_chat) {
 		
 	    $ch = curl_init();
@@ -195,7 +195,7 @@ function message_to_telegram($text)
 		            CURLOPT_POST => TRUE,
 		            CURLOPT_RETURNTRANSFER => TRUE,
 		            CURLOPT_TIMEOUT => 10,
-		            CURLOPT_POSTFIELDS => array(
+		            CURLOPT_POSTFIELDS => array( 
 		                'chat_id' => $item,
 		                'text' => $text,
 		            ),
