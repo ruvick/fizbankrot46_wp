@@ -123,14 +123,14 @@ function rasa_widgets_init()
 		'after_title'   => '</h2>',
 	));
 }
-add_action('widgets_init', 'rasa_widgets_init'); 
+add_action('widgets_init', 'rasa_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
 function rasa_scripts()
 {
-	wp_enqueue_style('rasa-style', get_stylesheet_uri(), array(), "1.0.11");
+	wp_enqueue_style('rasa-style', get_stylesheet_uri(), array(), "1.0.12");
 
 	wp_enqueue_script('jquery');
 
