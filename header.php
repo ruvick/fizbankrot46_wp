@@ -139,6 +139,8 @@ var_dump($_COOKIE['modal-cookie']); ?>
     <header class="header">
       <div class="container">
         <div class="logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/logo.svg)"></div>
+        <a href="tel:+79510761819" onclick="ym(54022006, 'reachGoal', 'calltap');" class="mob-phone-link">+7 951 076 18 19</a>
+        <a href="tel:+79510761819" onclick="ym(54022006, 'reachGoal', 'calltap');" class="mob-phone-link__icon"></a>
         <div class="hamburger">
           <span class="hamburger-top"></span>
           <span class="hamburger-middle"></span>
