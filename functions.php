@@ -131,7 +131,7 @@ add_action('widgets_init', 'rasa_widgets_init');
 function rasa_scripts()
 {
 	wp_enqueue_style('rasa-style', get_stylesheet_uri(), array(), "1.0.12");
-
+	
 	wp_enqueue_script('jquery');
 
 	wp_enqueue_script('rasa-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
@@ -139,6 +139,7 @@ function rasa_scripts()
 	wp_enqueue_script('rasa-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
 
 	wp_enqueue_script('rasa-libs', get_template_directory_uri() . '/js/scripts.min.js', array(), null, true);
+	wp_enqueue_script('q-libs', get_template_directory_uri() . '/js/q.js', array(), null, true);
 
 	//wp_enqueue_script( 'snowfall', get_template_directory_uri() . '/js/snowfall.js', array(), null, true);
 

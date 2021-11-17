@@ -558,6 +558,7 @@ a {
   color: #be1e2d;
   font-size: 20px;
   border-radius: 8px;
+  max-height: 38px;
 }
 
 .button:hover {
@@ -1158,6 +1159,8 @@ section .container {
 	-o-flex-direction: column;
 	flex-direction: column;
 }
+.q_blk input[type=tel],
+.q_blk input[type=text],
 .box-modal input {
 	margin-bottom: 14px;
 	height: 40px;
@@ -1253,6 +1256,95 @@ section .container {
 	margin-bottom: 20px;
     border-left: 5px solid #be1e2d;
     padding-left: 20px;
+}
+
+.price_tarif_q {
+  flex-grow: 1;
+}
+
+.q_form {
+  width:100%;
+  min-height: 250px;
+  border-left: 5px solid #be1e2d;
+  padding-left: 40px;
+  flex-direction: column;
+  display: flex;
+}
+
+.q_blk.active {
+  display: flex;
+}
+
+.q_blk {
+  display: none;
+  flex-direction: column;
+}
+
+.q_blk h3{ 
+  margin-top: 0;
+  font-family: Lato-Heavy, sans-serif;
+}
+
+.q_blk label{ 
+  width: 100%;
+  margin: 3px 0;
+}
+
+.q_blk input[type=radio],
+.q_blk input[type=checkbox]{ 
+  display: none;
+}
+
+.q_blk input[type=checkbox]:checked + label::before{
+  content: '✓';
+  color: #be1e2d;
+  text-align: center;
+  font-weight: bold;
+}
+
+.q_blk input[type=radio]:checked + label::before{
+  content: '';
+  background-color: #be1e2d;
+  border:2px solid white;
+}
+
+
+.q_blk .label_ch::before{ 
+  content:'';
+  float:left;
+  width:18px;
+  height:18px;
+  border-radius: 2px;
+  border:1px solid gray;
+  margin-right: 10px;
+}
+
+.q_blk .label_r::before{ 
+  content:'';
+  float:left;
+  width:16px;
+  height:16px;
+  border-radius: 10px;
+  border:1px solid gray;
+  margin-right: 10px;
+}
+
+.controlBlk {
+  margin-top: auto;
+  display: flex;
+}
+
+.q_steps {
+  margin: auto 20px auto 0;
+}
+
+.q_prev {
+  margin-right: 10px;
+  font-weight: bolder;
+}
+
+.q_send {
+  display: none;
 }
 
 .price_cr {
@@ -2026,6 +2118,12 @@ line-height:2.5;
 }
 
 @media only screen and (max-width: 450px) {
+
+  .q_form {
+    padding: 0 10px;
+    border: none;
+  }
+
   .docs-modal__photo {
     height: 100px;
   }

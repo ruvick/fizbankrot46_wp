@@ -149,7 +149,7 @@ get_header();
 	  
     </section>
 	
-	<section class="price" id="price">
+	<!-- <section class="price" id="price">
 		<div class="container">
 			<div class="price-title">Цены на услуги сопровождения банкротства</div>
 			<div class = "price_tarif">
@@ -170,9 +170,111 @@ get_header();
 				
 			</div>
 		</div>
-	</section>
+	</section> -->
 	
-	<section class="facts">
+  <section class="price" id="price">
+		<div class="container">
+      <div class="price-title ">Расчет стоимости сопровождения банкротства</div>
+      <div class = "price_tarif price_tarif_q">		
+        <form class = "q_form" action="">
+          <div class = "q_blk step1 active">
+            <h3>Какие у Вас непогашенные задолжености:</h3>
+            <input id = "dolg_ch_1" type="checkbox" value = "Кредитные карты" name = "dolg[]">
+            <label class = "label_ch" for = "dolg_ch_1">Кредитные карты</label>
+
+            <input id = "dolg_ch_2" type="checkbox" value = "Потребительские кредиты" name = "dolg[]">
+            <label class = "label_ch" for = "dolg_ch_2">Потребительские кредиты</label>
+
+            <input id = "dolg_ch_3" type="checkbox" value = "Микрозайм" name = "dolg[]">
+            <label class = "label_ch" for = "dolg_ch_3">Микрозайм</label>
+
+            <input id = "dolg_ch_4" type="checkbox" value = "Ипотека" name = "dolg[]">
+            <label class = "label_ch" for = "dolg_ch_4">Ипотека</label>
+
+            <input id = "dolg_ch_5" type="checkbox" value = "Автокредит" name = "dolg[]">
+            <label class = "label_ch" for = "dolg_ch_5">Автокредит</label>
+          </div>
+
+          <div class = "q_blk step2">
+            <h3>Колличество ваших кредитов:</h3>
+
+            <input checked id = "count_r_1" type="radio" value = "1" name = "count">
+            <label class = "label_r" for = "count_r_1">1</label>
+
+            <input id = "count_r_2" type="radio" value = "2" name = "count">
+            <label class = "label_r" for = "count_r_2">2</label>
+
+            <input id = "count_r_3" type="radio" value = "3" name = "count">
+            <label class = "label_r" for = "count_r_3">3</label>
+
+            <input id = "count_r_3b" type="radio" value = ">3" name = "count">
+            <label class = "label_r" for = "count_r_3b">> 3</label>
+          </div>
+
+          <div class = "q_blk step3">
+            <h3>Сумма вашего долга:</h3>
+            <input checked id = "summ_r_1" type="radio" value = "от 100 до 300 тысяч" name = "summ">
+            <label class = "label_r" for = "summ_r_1">от 100 до 300 тысяч</label>
+
+            <input id = "summ_r_2" type="radio" value = "от 300 до 1 милиона" name = "summ">
+            <label class = "label_r" for = "summ_r_2">от 300 до 1 милиона</label>
+
+            <input id = "summ_r_3" type="radio" value = "свыще 1 милиона" name = "summ">
+            <label class = "label_r" for = "summ_r_3">свыще 1 милиона</label>
+
+          </div>
+
+          <div class = "q_blk step4">
+            <h3>Есть ли у Вас ипотека?</h3>
+            
+            <input checked id = "ipt_r_1" type="radio" value = "Да" name = "ipot">
+            <label class = "label_r" for = "ipt_r_1">Да</label>
+
+            <input id = "ipt_r_2" type="radio" value = "Нет" name = "ipot">
+            <label class = "label_r" for = "ipt_r_2">Нет</label>
+          </div>
+
+          <div class = "q_blk step5">
+            <h3>Есть ли у Вас официальный доход?</h3>
+            
+            <input checked id = "dohod_r_1" type="radio" value = "Да" name = "dohod">
+            <label class = "label_r" for = "dohod_r_1">Да</label>
+
+            <input id = "dohod_r_2" type="radio" value = "Нет" name = "dohod">
+            <label class = "label_r" for = "dohod_r_2">Нет</label>
+          </div>
+
+          <div class = "q_blk step6">
+            <h3>Есть ли у Вас имущество в собственности?</h3>
+            
+            <input checked id = "sobst_r_1" type="radio" value = "Да" name = "sobst">
+            <label class = "label_r" for = "sobst_r_1">Да</label>
+
+            <input id = "sobst_r_2" type="radio" value = "Нет" name = "sobst">
+            <label class = "label_r" for = "sobst_r_2">Нет</label>
+          </div>
+          
+          <div class = "q_blk step7">
+            <h3>Укажите данные для отправки результатов расчета:</h3>
+            
+            <input id = "q_name" type="text" name="name" placeholder="Ваше имя">
+            <input id = "q_tel" type="tel" name="tel" placeholder="Ваш телефон*">
+          </div>
+
+          <div class="controlBlk">
+            <div class="q_steps">
+              <span class = "as">1</span>/<span  class = "all">7</span>
+            </div>  
+            <a href="#" class="button q_prev" id = "q_prev">←</a>
+            <a href="#" class="button q_next" id = "q_next">Далее</a>
+            <a href="#" class="button q_send" id = "q_send">Отправить</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+	
+  <section class="facts">
       <div class="container">
         <div class="facts-title">Несколько фактов о кредитовании в РФ</div>
         <div class="facts-item">
