@@ -23,14 +23,14 @@ jQuery(document).ready(function ($) {
     $('#docs-modal').arcticmodal();
   });
 
-  $('.modal-block__close').click(function () {
-    $('.modal-block').hide();
-  });
+  // $('.modal-block__close').click(function () {
+  //   $('.modal-block').hide();
+  // });
 
-  $('.modal-block').hide();
-  setTimeout(function () {
-    $('.modal-block').css('display', 'flex');
-  }, 12000);
+  // $('.modal-block').hide();
+  // setTimeout(function () {
+  //   $('.modal-block').css('display', 'flex');
+  // }, 12000);
 
   jQuery(".uniSendBtn-2").click(function (e) {
     e.preventDefault();
