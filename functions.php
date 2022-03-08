@@ -185,6 +185,51 @@ function universal_send()
 	}
 }
 
+
+add_action('wp_ajax_q_send', 'q_send');
+add_action('wp_ajax_nopriv_q_send', 'q_send');
+
+function q_send()
+{
+	if (empty($_REQUEST['nonce'])) {
+		wp_die('0');
+	}
+
+	if (check_ajax_referer('NEHERTUTLAZIT', 'nonce', false)) {
+
+		$headers = array(
+			'From: Сайт Tabula Rasa <noreply@fizbankrot46.ru>',
+			'content-type: text/html',
+		);
+
+		$message = 'Сообщение с Квиза <br/>'. 
+			"<strong>Имя: </strong>". $_REQUEST["name"] . "<br/>". 
+			"<strong>Телефон: </strong>". $_REQUEST["tel"] . "<br/>". 
+			"<h4>Данные о задолженности:</h4><br/>". 
+			"<strong>Непогашенные задолженности: </strong>". implode ($_REQUEST["dolg"]) . "<br/>". 
+			"<strong>Количество кредитов: </strong>". $_REQUEST["count"] . "<br/>". 
+			"<strong>Сумма кредитов: </strong>". $_REQUEST["summ"] . "<br/>". 
+			"<strong>Наличие ипотеки: </strong>". $_REQUEST["ipot"] . "<br/>". 
+			"<strong>Официальный доход: </strong>". $_REQUEST["dohod"] . "<br/>". 
+			"<strong>Собственность: </strong>". $_REQUEST["sobst"];
+		
+			$message_tg = str_replace("<br/>", "\n", $message);
+			$message_tg = str_replace(array("<strong>", "</strong>"), "", $message_tg);
+			$message_tg = str_replace(array("<h4>", "</h4>"), "", $message_tg);
+			
+		message_to_telegram($message_tg);
+		add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+		
+		if (wp_mail('grohotov@grand-kg.ru, asmi046@gmail.com', 'Заявка с квиза', $message, $headers))
+			wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
+		else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>");
+
+	} else {
+		wp_die('НО-НО-НО!', '', 403);
+	}
+}
+
+
 define('TELEGRAM_TOKEN', '938251436:AAEGSIJWTeSKkrGNDf1xt_C_Y8YhTUROkwU');
 define('TELEGRAM_CHATID', '86447923');
 function message_to_telegram($text)

@@ -176,7 +176,7 @@ get_header();
 		<div class="container">
       <div class="price-title ">Расчет стоимости сопровождения банкротства</div>
       <div class = "price_tarif price_tarif_q">		
-        <form class = "q_form" action="">
+        <form class = "q_form" id = "q_form" action="">
           <div class = "q_blk step1 active">
             <h3>Какие у Вас непогашенные задолжености:</h3>
             <input id = "dolg_ch_1" type="checkbox" value = "Кредитные карты" name = "dolg[]">

@@ -94,5 +94,36 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Заполние поле 'Телефон'");
             return;
         }
+
+        let q_form = document.getElementById("q_form")
+        var q_data = new FormData(q_form);
+
+        q_data.append("action", "q_send")
+        q_data.append("nonce", allAjax.nonce)
+
+        console.log(q_data)
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.onload = function(e) {
+
+            if (xhr.status == 200) {
+        
+                location.href = "https://fizbankrot46.ru/stranicza-blagodarnosti"
+                console.log(xhr);
+            } else {
+                console.log(xhr.status)
+                console.log(xhr.statusText)
+                alert("При отправке произошла ошибка")
+            }
+            
+        }
+        
+        xhr.onerror = function(msg) {
+            console.log("eroroa" + xhr.statusText)
+        }
+
+        xhr.open('POST', allAjax.ajaxurl, true);
+        xhr.send(q_data);
     }
 });
