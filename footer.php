@@ -24,7 +24,7 @@
 	</div>
 	
 	<div class="contacts">
-      <a href="tel:+79510761819" onclick="ym(54022006, 'reachGoal', 'calltap');" class="phone-link">+7 951 076 18 19</a>
+      <a href="tel:+79102171919" onclick="ym(54022006, 'reachGoal', 'calltap');" class="phone-link">+7 910 217 19 19</a>
       <a href="#" class="button popup-modal" data-formid="Заявка с подвала сайта" data-mailmsg="Заявка с подвала сайта" onclick="ym(54022006, 'reachGoal', 'winopen');">Заказать звонок</a>
     </div>
   </div>
@@ -49,7 +49,6 @@
 			</div>
 			<div class="modal-block__title modal-block__title_date">Скидка действует <span class="color-red">до 25 <?php date_action();?></span></div>
 			<form class="modal-block__btn">
-				<!-- <a href="tel:+79510761819" class="modal-block__phone">+7 951 076 18 19</a> -->
 				<input type="tel" name="tel" placeholder="+7(___)___-__-__">
 				<a href="#" class="button uniSendBtn" data-formid="Заявка с блока Скидка на процедуру банкротства 10%" data-mailmsg="Заявка с блока Скидка на процедуру банкротства 10%">Получить скидку</a>
 			</form>

@@ -10,6 +10,7 @@
     "send_ms": "scp -C *.css grohotov46_all@grohotov46.beget.tech:fizbankrot46.ru//public_html/wp-content/themes/rasa/",
     "send_head": "scp -C header.php grohotov46_all@grohotov46.beget.tech:fizbankrot46.ru//public_html/wp-content/themes/rasa/",
     "send_cat": "scp -C category.php grohotov46_all@grohotov46.beget.tech:fizbankrot46.ru//public_html/wp-content/themes/rasa/",
+    "send_one": "scp -C page-thankyou.php grohotov46_all@grohotov46.beget.tech:fizbankrot46.ru//public_html/wp-content/themes/rasa/",
     "send_singl": "scp -C single.php grohotov46_all@grohotov46.beget.tech:fizbankrot46.ru//public_html/wp-content/themes/rasa/",
     "send_index": "scp -C index.php grohotov46_all@grohotov46.beget.tech:fizbankrot46.ru//public_html/wp-content/themes/rasa/",
     "send_func": "scp -C functions.php grohotov46_all@grohotov46.beget.tech:fizbankrot46.ru//public_html/wp-content/themes/rasa/",

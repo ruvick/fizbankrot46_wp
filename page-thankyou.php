@@ -127,9 +127,8 @@ get_header();
           ул. Павлуновского,<br>
           д. 48а
         </div>
-        <a href="tel:+79192701919" onclick="ym(54022006, 'reachGoal', 'calltap');" class="map-content-phone">+7 919 270 19 19</a><br/>
-		<a href="tel:+79510761819" onclick="ym(54022006, 'reachGoal', 'calltap');" class="map-content-phone">+7 951 076 18 19</a>
-		
+        <a href="tel:+79102171919" onclick="ym(54022006, 'reachGoal', 'calltap');" class="map-content-phone">+7 910 217 19 19</a><br/>
+	
       </div>
     </section>
 

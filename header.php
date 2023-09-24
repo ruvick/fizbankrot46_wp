@@ -139,8 +139,8 @@ var_dump($_COOKIE['modal-cookie']); ?>
     <header class="header">
       <div class="container">
         <div class="logo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/logo.svg)"></div>
-        <a href="tel:+79510761819" onclick="ym(54022006, 'reachGoal', 'calltap');" class="mob-phone-link">+7 951 076 18 19</a>
-        <a href="tel:+79510761819" onclick="ym(54022006, 'reachGoal', 'calltap');" class="mob-phone-link__icon"></a>
+        <a href="tel:+79102171919" onclick="ym(54022006, 'reachGoal', 'calltap');" class="mob-phone-link">+7 910 217 19 19</a>
+        <a href="tel:+79102171919" onclick="ym(54022006, 'reachGoal', 'calltap');" class="mob-phone-link__icon"></a>
         <div class="hamburger">
           <span class="hamburger-top"></span>
           <span class="hamburger-middle"></span>
@@ -154,14 +154,14 @@ var_dump($_COOKIE['modal-cookie']); ?>
           <li><a href="#kontakta">Контакты</a></li>
         </ul>
         <div class="contacts">
-          <a href="tel:+79510761819" onclick="ym(54022006, 'reachGoal', 'calltap');" class="phone-link">+7 951 076 18 19</a>
+          <a href="tel:+79102171919" onclick="ym(54022006, 'reachGoal', 'calltap');" class="phone-link">+7 910 217 19 19</a>
           <a href="#" class="button popup-modal" data-formid="Заявка с шапки сайта" data-mailmsg="Заявка с шапки сайта" onclick="ym(54022006, 'reachGoal', 'winopen');">Заказать звонок</a>
         </div>
       </div>
     </header>
 
     <div class="callbuttonbuttom">
-      <a href="tel:+79510761819" onclick="ym(54022006, 'reachGoal', 'bigredbutton');" class="phone-link">Получить консультацию</a>
+      <a href="tel:+79102171919" onclick="ym(54022006, 'reachGoal', 'bigredbutton');" class="phone-link">Получить консультацию</a>
     </div>
 
     <div id="content" class="site-content">
